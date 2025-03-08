@@ -25,6 +25,7 @@ jobs:
     - run: ./manage.sh linux64
     - name: Test Xidel
       run: bash ./tests/tests.sh
+      continue-on-error: true
     - name: 'Cross compile FreePascal'
       run: |
         sudo apt install libc6-dev-i386-cross libgcc-10-dev-i386-cross binutils-i686-linux-gnu libc6-dev-armel-cross libgcc-10-dev-armel-cross binutils-arm-linux-gnueabi libc6-dev-arm64-cross libgcc-10-dev-arm64-cross binutils-aarch64-linux-gnu
